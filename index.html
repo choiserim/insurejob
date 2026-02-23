@@ -21,47 +21,47 @@
 </head>
 <body class="relative">
 
-    <!-- 로그인 모달 (Login Modal) -->
+    <!-- 로그인 및 회원가입 모달 (Auth Modal) -->
     <div id="loginModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
         <div class="absolute inset-0 bg-black bg-opacity-50 modal-overlay" onclick="closeLoginModal()"></div>
-        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 relative z-10 modal-content shadow-2xl">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 relative z-10 modal-content shadow-2xl border border-gray-100">
             <button onclick="closeLoginModal()" class="absolute top-6 right-6 text-gray-400 hover:text-gray-600">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
             
             <div class="text-center mb-8">
                 <span class="text-2xl font-black text-blue-700 tracking-tighter">INSURE<span class="text-gray-800">JOB</span></span>
-                <h2 class="text-xl font-bold text-gray-800 mt-4">간편 로그인 및 회원가입</h2>
-                <p class="text-gray-500 text-sm mt-2">별도의 회원가입 없이 소셜 계정으로 시작하세요.</p>
+                <h2 id="modalTitle" class="text-xl font-bold text-gray-800 mt-4">간편 로그인 및 회원가입</h2>
+                <p class="text-gray-500 text-sm mt-2">별도의 양식 없이 소셜 계정으로 3초 만에 시작하세요.</p>
             </div>
 
             <div class="space-y-3">
                 <!-- 카카오 로그인 -->
-                <button class="w-full flex items-center justify-center bg-[#FEE500] text-[#191919] font-bold py-3.5 rounded-xl hover:opacity-90 transition">
+                <button class="w-full flex items-center justify-center bg-[#FEE500] text-[#191919] font-bold py-3.5 rounded-xl hover:opacity-90 transition shadow-sm">
                     <i class="fa-solid fa-comment mr-3 text-lg"></i> 카카오로 시작하기
                 </button>
                 
                 <!-- 네이버 로그인 -->
-                <button class="w-full flex items-center justify-center bg-[#03C75A] text-white font-bold py-3.5 rounded-xl hover:opacity-90 transition">
+                <button class="w-full flex items-center justify-center bg-[#03C75A] text-white font-bold py-3.5 rounded-xl hover:opacity-90 transition shadow-sm">
                     <span class="mr-3 font-black text-lg">N</span> 네이버로 시작하기
                 </button>
                 
                 <!-- 구글 로그인 -->
-                <button class="w-full flex items-center justify-center bg-white border border-gray-300 text-gray-700 font-bold py-3.5 rounded-xl hover:bg-gray-50 transition">
+                <button class="w-full flex items-center justify-center bg-white border border-gray-200 text-gray-700 font-bold py-3.5 rounded-xl hover:bg-gray-50 transition shadow-sm">
                     <i class="fa-brands fa-google mr-3 text-lg text-red-500"></i> Google로 시작하기
                 </button>
                 
                 <!-- 애플 로그인 -->
-                <button class="w-full flex items-center justify-center bg-black text-white font-bold py-3.5 rounded-xl hover:opacity-90 transition">
+                <button class="w-full flex items-center justify-center bg-black text-white font-bold py-3.5 rounded-xl hover:opacity-90 transition shadow-sm">
                     <i class="fa-brands fa-apple mr-3 text-xl"></i> Apple로 시작하기
                 </button>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-gray-100 flex justify-between items-center text-sm text-gray-500">
+            <div class="mt-8 pt-6 border-t border-gray-100 flex justify-between items-center text-sm text-gray-400">
                 <span>일반 로그인 정보 찾기</span>
                 <div class="flex gap-4">
-                    <a href="#" class="hover:underline">아이디</a>
-                    <a href="#" class="hover:underline">비밀번호</a>
+                    <a href="#" class="hover:underline hover:text-gray-600">아이디</a>
+                    <a href="#" class="hover:underline hover:text-gray-600">비밀번호</a>
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center gap-2">
-                    <span class="text-2xl font-black text-blue-700 tracking-tighter cursor-pointer">INSURE<span class="text-gray-800">JOB</span></span>
+                    <span class="text-2xl font-black text-blue-700 tracking-tighter cursor-pointer" onclick="location.reload()">INSURE<span class="text-gray-800">JOB</span></span>
                 </div>
                 <div class="hidden md:flex space-x-8 font-medium text-gray-600">
                     <a href="#" class="hover:text-blue-600">채용정보</a>
@@ -82,7 +82,8 @@
                 </div>
                 <div class="flex items-center gap-4">
                     <button onclick="openLoginModal()" class="text-sm font-medium text-gray-500 hover:text-gray-700">로그인</button>
-                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700">회원가입</a>
+                    <!-- 회원가입 버튼에 모달 이벤트 연동 -->
+                    <button onclick="openLoginModal()" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700 transition">회원가입</button>
                 </div>
             </div>
         </div>
@@ -119,7 +120,7 @@
     <!-- 핵심 서비스 퀵메뉴 -->
     <section class="max-w-7xl mx-auto px-4 -mt-10 mb-16 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-600 flex justify-between items-center group cursor-pointer">
+            <div onclick="openLoginModal()" class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-600 flex justify-between items-center group cursor-pointer">
                 <div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">일자리를 찾으시나요?</h3>
                     <p class="text-gray-500">나에게 딱 맞는 고수익 보험 영업 공고 확인</p>
@@ -131,7 +132,7 @@
                     <i class="fa-solid fa-file-invoice"></i>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-emerald-500 flex justify-between items-center group cursor-pointer">
+            <div onclick="openLoginModal()" class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-emerald-500 flex justify-between items-center group cursor-pointer">
                 <div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">인재를 구하시나요?</h3>
                     <p class="text-gray-500">실력 있는 설계사 및 관리자 채용 공고 등록</p>
