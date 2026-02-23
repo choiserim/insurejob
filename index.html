@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보험영업잡 - 대한민국 NO.1 보험 구인구직</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { font-family: 'Pretendard', sans-serif; background-color: #f8fafc; }
+        .hero-gradient { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .search-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+        .category-card:hover { transform: translateY(-5px); transition: all 0.3s; }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-black text-blue-700 tracking-tighter">INSURE<span class="text-gray-800">JOB</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                    <a href="#" class="hover:text-blue-600">채용정보</a>
+                    <a href="#" class="hover:text-blue-600">인재정보</a>
+                    <a href="#" class="hover:text-blue-600">커뮤니티</a>
+                    <a href="#" class="hover:text-blue-600">이용안내</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-sm font-medium text-gray-500 hover:text-gray-700">로그인</a>
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-700">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 (검색) -->
+    <section class="hero-gradient py-16 px-4 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                당신의 보험 커리어,<br>검증된 리더와 함께 시작하세요.
+            </h1>
+            <p class="text-blue-100 text-lg mb-10">전국 3,500개 이상의 보험 지점과 설계사가 매칭되고 있습니다.</p>
+            
+            <!-- 통합 검색창 -->
+            <div class="bg-white p-2 rounded-xl md:rounded-full search-shadow flex flex-col md:flex-row gap-2">
+                <div class="flex-1 flex items-center px-4 border-b md:border-b-0 md:border-r border-gray-100">
+                    <i class="fa-solid fa-location-dot text-blue-500 mr-3"></i>
+                    <select class="w-full py-3 text-gray-700 focus:outline-none appearance-none bg-transparent">
+                        <option>전국 지역</option>
+                        <option>서울 전체</option>
+                        <option>경기/인천</option>
+                    </select>
+                </div>
+                <div class="flex-[1.5] flex items-center px-4">
+                    <i class="fa-solid fa-magnifying-glass text-blue-500 mr-3"></i>
+                    <input type="text" placeholder="직종, 회사명, 키워드를 입력하세요" class="w-full py-3 text-gray-700 focus:outline-none">
+                </div>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded-xl md:rounded-full transition">
+                    일자리 찾기
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 핵심 서비스 퀵메뉴 -->
+    <section class="max-w-7xl mx-auto px-4 -mt-10 mb-16 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-600 flex justify-between items-center group cursor-pointer">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">일자리를 찾으시나요?</h3>
+                    <p class="text-gray-500">나에게 딱 맞는 고수익 보험 영업 공고 확인</p>
+                    <div class="mt-4 inline-flex items-center text-blue-600 font-bold">
+                        이력서 등록하기 <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-5 rounded-full text-blue-600 text-3xl">
+                    <i class="fa-solid fa-file-invoice"></i>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-emerald-500 flex justify-between items-center group cursor-pointer">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">인재를 구하시나요?</h3>
+                    <p class="text-gray-500">실력 있는 설계사 및 관리자 채용 공고 등록</p>
+                    <div class="mt-4 inline-flex items-center text-emerald-600 font-bold">
+                        구인공고 등록하기 <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition"></i>
+                    </div>
+                </div>
+                <div class="bg-emerald-50 p-5 rounded-full text-emerald-600 text-3xl">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 직종별 카테고리 -->
+    <section class="max-w-7xl mx-auto px-4 mb-16">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-gray-800">분야별 전문 채용관</h2>
+            <a href="#" class="text-sm text-gray-500 hover:underline">전체보기</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div class="bg-white p-6 rounded-xl border border-gray-100 text-center category-card cursor-pointer shadow-sm">
+                <i class="fa-solid fa-briefcase text-blue-500 text-2xl mb-3"></i>
+                <p class="font-bold text-gray-700">보험총무</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 text-center category-card cursor-pointer shadow-sm">
+                <i class="fa-solid fa-user-group text-blue-500 text-2xl mb-3"></i>
+                <p class="font-bold text-gray-700">보험설계사</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 text-center category-card cursor-pointer shadow-sm">
+                <i class="fa-solid fa-chart-line text-blue-500 text-2xl mb-3"></i>
+                <p class="font-bold text-gray-700">재무설계사</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 text-center category-card cursor-pointer shadow-sm">
+                <i class="fa-solid fa-headset text-blue-500 text-2xl mb-3"></i>
+                <p class="font-bold text-gray-700">TM/상담</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 text-center category-card cursor-pointer shadow-sm">
+                <i class="fa-solid fa-building text-blue-500 text-2xl mb-3"></i>
+                <p class="font-bold text-gray-700">GA지점장</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-gray-100 text-center category-card cursor-pointer shadow-sm">
+                <i class="fa-solid fa-car-crash text-blue-500 text-2xl mb-3"></i>
+                <p class="font-bold text-gray-700">보상/언더라이팅</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프리미엄 공고 리스트 -->
+    <section class="max-w-7xl mx-auto px-4 mb-20">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-gray-800">🚀 금주 급구 채용 공고</h2>
+            <div class="flex gap-2">
+                <button class="bg-gray-200 p-2 rounded-full hover:bg-gray-300"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="bg-gray-200 p-2 rounded-full hover:bg-gray-300"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 공고 아이템 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-red-50 text-red-600 text-xs font-bold px-2 py-1 rounded">급구</span>
+                        <button class="text-gray-400 hover:text-blue-500"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">프라임에셋 서초지점</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 line-clamp-1">DB제공/최고수수료/설계사 무한 모집</h3>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">서울 강남</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">월 500+</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">신입/경력</span>
+                    </div>
+                    <div class="border-t pt-4 flex justify-between items-center">
+                        <span class="text-xs text-gray-400">등록일: 2024.05.20</span>
+                        <a href="#" class="text-blue-600 font-bold text-sm">상세보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 공고 아이템 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-blue-50 text-blue-600 text-xs font-bold px-2 py-1 rounded">Hot</span>
+                        <button class="text-gray-400 hover:text-blue-500"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">한화손해보험 본사</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 line-clamp-1">영업 지원 총무 신입사원 정규직 채용</h3>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">서울 영등포</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">연봉 3,400</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">정규직</span>
+                    </div>
+                    <div class="border-t pt-4 flex justify-between items-center">
+                        <span class="text-xs text-gray-400">등록일: 2024.05.19</span>
+                        <a href="#" class="text-blue-600 font-bold text-sm">상세보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 공고 아이템 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-emerald-50 text-emerald-600 text-xs font-bold px-2 py-1 rounded">신규</span>
+                        <button class="text-gray-400 hover:text-blue-500"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-1">메리츠화재 경기본부</p>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 line-clamp-1">GA 경력 관리자 지점장급 모십니다</h3>
+                    <div class="flex gap-2 mb-6">
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">경기 수원</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">협의후결정</span>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded text-gray-600">경력직</span>
+                    </div>
+                    <div class="border-t pt-4 flex justify-between items-center">
+                        <span class="text-xs text-gray-400">등록일: 2024.05.21</span>
+                        <a href="#" class="text-blue-600 font-bold text-sm">상세보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <span class="text-2xl font-black text-white tracking-tighter">INSURE<span class="text-blue-500">JOB</span></span>
+                    <p class="mt-4 text-sm">보험영업 전문 구인구직 플랫폼<br>성공적인 매칭을 지원합니다.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">서비스</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">채용공고 검색</a></li>
+                        <li><a href="#" class="hover:text-white">인재정보 검색</a></li>
+                        <li><a href="#" class="hover:text-white">유료광고 안내</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">고객지원</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white">공지사항</a></li>
+                        <li><a href="#" class="hover:text-white">1:1 문의하기</a></li>
+                        <li><a href="#" class="hover:text-white">자주묻는질문</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">고객센터</h4>
+                    <p class="text-xl font-bold text-white">1588-0000</p>
+                    <p class="text-xs mt-2">평일 09:00 ~ 18:00 (주말 공휴일 제외)</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-xs flex flex-col md:flex-row justify-between gap-4">
+                <p>© 2024 InsureJob Co., Ltd. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">이용약관</a>
+                    <a href="#" class="hover:text-white font-bold">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
